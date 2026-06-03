@@ -47,7 +47,7 @@ class HomeTab : Fragment() {
         PhrasePair("Hora de energizar seus conhecimentos!", "⚡"),
         PhrasePair("Conecte-se com o saber da eletrônica.", "📖"),
         PhrasePair("O tempo passa rápido quando a gente se diverte...", "🤣"),
-        PhrasePair("Quem tem mais, tem 15!", "🏆"),
+        PhrasePair("Quem tem mais, tem 16!", "🏆"),
         PhrasePair("Preparado para acender ideias hoje?", "✨"),
         PhrasePair("Cada detalhe aprendido é uma nova conquista.", "🎯"),
         PhrasePair("A aventura da eletrônica nunca para!", "💪"),
