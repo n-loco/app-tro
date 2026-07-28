@@ -38,6 +38,7 @@ class MainActivity : AppCompatActivity() {
                 1 -> { tab.text = "Disciplinas"; tab.icon = ContextCompat.getDrawable(this, R.drawable.ic_subjetcs) }
                 2 -> { tab.text = "Resistores"; tab.icon = ContextCompat.getDrawable(this, R.drawable.ic_resistor) }
                 3 -> { tab.text = "Devs"; tab.icon = ContextCompat.getDrawable(this, R.drawable.ic_devs) }
+                4 -> { tab.text = "Fenadoce"; tab.icon = ContextCompat.getDrawable(this, R.drawable.ic_cake) }
             }
         }.attach()
 
