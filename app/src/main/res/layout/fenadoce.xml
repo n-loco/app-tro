@@ -6,8 +6,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <FrameLayout
+        android:id="@+id/fenadoce_unsupported"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foregroundGravity="center"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Oops! Seu dispositivo não suporta este recurso..."
+            android:textSize="20sp" />
+    </FrameLayout>
+
     <LinearLayout
-        android:id="@+id/lay"
+        android:id="@+id/fenadoce_tab_ok"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -19,11 +39,25 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <Button
-            android:id="@+id/pulse"
+            android:id="@+id/fenadoce_connect"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:text="Conectar"
+            android:visibility="visible" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <Button
+            android:id="@+id/fenadoce_pulse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:enabled="false"
             android:text="Pulso"
             android:visibility="visible" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
