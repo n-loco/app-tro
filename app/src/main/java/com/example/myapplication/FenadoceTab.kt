@@ -108,22 +108,23 @@ class FenadoceTab(private val activity: Activity) : Fragment() {
             return
         }
 
-        suspend fun connect() =
+        suspend fun connect(): BluetoothSocket =
             withContext(Dispatchers.IO) {
                 val socket = device.createRfcommSocketToServiceRecord(SPP_UUID)
-                try {
-                    socket.connect()
-                    updateState(FenadoceTabState.Idle)
-                    engineSocket = socket
-                } catch (_: IOException) {
-                    Toast.makeText(requireContext(), "Não foi possível conectar.", Toast.LENGTH_SHORT).show()
-                    updateState(FenadoceTabState.NoConnection)
-                    engineSocket = null
-                }
+                socket.connect()
+                socket
             }
 
         lifecycleScope.launch {
-            connect()
+            try {
+                val socket = connect()
+                updateState(FenadoceTabState.Idle)
+                engineSocket = socket
+            } catch (_: IOException) {
+                Toast.makeText(requireContext(), "Não foi possível conectar.", Toast.LENGTH_SHORT).show()
+                updateState(FenadoceTabState.NoConnection)
+                engineSocket = null
+            }
         }
     }
 
