@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.myapplication"
+    namespace = "br.edu.ifsul.apptro"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.apptro"
+        applicationId = "br.edu.ifsul.apptro"
         minSdk = 24
         targetSdk = 36
         versionCode = 1

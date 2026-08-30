@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "myapplication"
+rootProject.name = "apptro"
 include(":app")
